@@ -6,7 +6,7 @@
 /*   By: ogokdas <ogokdas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:48:03 by ogokdas           #+#    #+#             */
-/*   Updated: 2025/07/12 15:48:05 by ogokdas          ###   ########.fr       */
+/*   Updated: 2025/07/14 11:07:54 by ogokdas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
-char	*ft_read(char *s, int fd);
-char	*ft_getline(char *s);
-int		newline(const char *s);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);

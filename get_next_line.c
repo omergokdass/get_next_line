@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-int	newline(const char *s)
+static int	newline(const char *s)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	newline(const char *s)
 	return (0);
 }
 
-char	*ft_read(char *s, int fd)
+static char	*ft_read(char *s, int fd)
 {
 	char	*buf;
 	ssize_t	rlen;
@@ -56,7 +56,7 @@ char	*ft_read(char *s, int fd)
 	return (s);
 }
 
-char	*ft_getline(char *s)
+static char	*ft_getline(char *s)
 {
 	int		i;
 	char	*line;
@@ -72,7 +72,7 @@ char	*ft_getline(char *s)
 	return (line);
 }
 
-char	*ft_getcut(char *s)
+static char	*ft_getcut(char *s)
 {
 	char	*line_end;
 	char	*res;

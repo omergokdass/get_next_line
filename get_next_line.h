@@ -21,9 +21,6 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
-char	*ft_read(char *s, int fd);
-char	*ft_getline(char *s);
-int		newline(const char *s);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);

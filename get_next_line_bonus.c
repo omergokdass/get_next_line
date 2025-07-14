@@ -6,13 +6,13 @@
 /*   By: ogokdas <ogokdas@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 15:47:44 by ogokdas           #+#    #+#             */
-/*   Updated: 2025/07/12 16:00:33 by ogokdas          ###   ########.fr       */
+/*   Updated: 2025/07/14 11:08:12 by ogokdas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-int	newline(const char *s)
+static int	newline(const char *s)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	newline(const char *s)
 	return (0);
 }
 
-char	*ft_read(char *s, int fd)
+static char	*ft_read(char *s, int fd)
 {
 	char	*buf;
 	ssize_t	rlen;
@@ -56,7 +56,7 @@ char	*ft_read(char *s, int fd)
 	return (s);
 }
 
-char	*ft_getline(char *s)
+static char	*ft_getline(char *s)
 {
 	int		i;
 	char	*line;
@@ -72,7 +72,7 @@ char	*ft_getline(char *s)
 	return (line);
 }
 
-char	*ft_getcut(char *s)
+static char	*ft_getcut(char *s)
 {
 	char	*line_end;
 	char	*res;
