@@ -31,7 +31,7 @@ int	newline(const char *s)
 char	*ft_read(char *s, int fd)
 {
 	char	*buf;
-	int		rlen;
+	ssize_t	rlen;
 
 	buf = malloc(BUFFER_SIZE + 1);
 	if (!buf)
@@ -47,6 +47,8 @@ char	*ft_read(char *s, int fd)
 			free(buf);
 			return (NULL);
 		}
+		if (rlen == 0)
+			return (free(buf), s);
 		buf[rlen] = '\0';
 		s = ft_strjoin(s, buf);
 	}
@@ -82,7 +84,7 @@ char	*ft_getcut(char *s)
 		return (NULL);
 	}
 	res = ft_strdup(line_end + 1);
-	free (s);
+	free(s);
 	return (res);
 }
 
